@@ -1,0 +1,49 @@
+body{
+  font-family: arial;
+  
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+
+}
+
+.timer{
+  text-align: center;
+  font-size: 100px;
+  color:rgb(10, 102, 194);
+  margin-bottom:50px;
+}
+
+.buttons-grid{
+  margin-left:150px;
+  margin-right: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 100px;
+}
+
+button{
+  background-color: white;
+  color: rgb(10, 102, 194);
+  border: 2px solid rgb(10, 102, 194);
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 150px;
+  cursor: pointer;
+  transition: background-color 0.15s,
+    border-width 0.05s; opacity: 0.15s, padding 0.05;
+  padding: 20px 50px  
+}
+
+button:hover{
+  border-width: 3px;
+  padding: 18px 50px;
+  background-color: rgb(226, 240, 254);
+}
+
+button:active{
+  opacity:0.5
+}
+
