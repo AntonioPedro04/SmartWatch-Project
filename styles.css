@@ -28,19 +28,21 @@ body{
 button{
   background-color: white;
   color: rgb(10, 102, 194);
-  border: 2px solid rgb(10, 102, 194);
+  outline: 2px solid rgb(10, 102, 194);
+  outline-offset: -2px;
   font-weight: bold;
   font-size: 30px;
   border-radius: 150px;
   cursor: pointer;
   transition: background-color 0.15s,
-    border-width 0.05s; opacity: 0.15s, padding 0.05;
-  padding: 20px 50px  
+  outline-width 0.05s; opacity: 0.15s, padding 0.05;
+  padding: 20px 50px;
+  border: none;
 }
 
 button:hover{
-  border-width: 3px;
-  padding: 18px 50px;
+  outline-width: 3px;
+  padding: 20px 50px;
   background-color: rgb(226, 240, 254);
 }
 
