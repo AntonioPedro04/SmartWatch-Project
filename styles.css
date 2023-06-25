@@ -3,7 +3,7 @@ body{
   
 }
 
-.grid{
+.timer-grid{
   display:grid;
   grid-template-columns: 1fr;
 

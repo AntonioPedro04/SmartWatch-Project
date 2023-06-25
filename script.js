@@ -4,9 +4,9 @@ timerElement = document.querySelector('.timer')
 timerElement.innerHTML = '00:00:00'
 
 let count = 0
-let Hours = 0
 let Minutes = 0
 let Seconds = 0
+let Miliseconds = 0
 
 started = false
 let intervalId;
@@ -16,20 +16,20 @@ function play() {
      if (!started) { intervalId = setInterval(function() {
       count += 1
   
-      Seconds = count % 60
+      Miliseconds = count % 100
   
-      Minutes = Math.floor(count/60)
-      Minutes = Minutes % 60
+      Seconds = Math.floor(count/100)
+      Seconds = Seconds % 60
   
-      Hours = Math.floor(count/3600)
+      Minutes = Math.floor(count/6000)
   
+      Miliseconds = toString(Miliseconds)
       Seconds = toString(Seconds)
       Minutes = toString(Minutes)
-      Hours = toString(Hours)
     
-      timerElement.innerHTML = `${Hours}:${Minutes}:${Seconds}`
+      timerElement.innerHTML = `${Minutes}:${Seconds}:${Miliseconds}`
       
-    }, 1000)
+    }, 10)
     started = true
   } else {
   
@@ -47,9 +47,9 @@ function reset() {
   clearInterval(intervalId)
   started = false
   count = 0
+  Miliseconds = 0
   Seconds = 0
   Minutes = 0
-  Hours = 0
   
 }
       
