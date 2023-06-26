@@ -1,28 +1,35 @@
 body{
   font-family: arial;
-  
+  height:100vh;
 }
 
-.timer-grid{
+.container{
   display:grid;
   grid-template-columns: 1fr;
+  position:relative;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
 
 }
 
 .timer{
   text-align: center;
-  font-size: 100px;
+  font-size: 50px;
   color:rgb(10, 102, 194);
   margin-bottom:50px;
 }
 
 .buttons-grid{
-  margin-left:150px;
-  margin-right: 150px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 100px;
   row-gap: 50px;
+  place-items: center;
+  transform: translate(-50%,-50%);
+  position:absolute;  
+  left:50%;
+  column-gap:10px;
+  top:50%;
 }
 
 button{
@@ -31,18 +38,18 @@ button{
   outline: 2px solid rgb(10, 102, 194);
   outline-offset: -2px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 18px;
   border-radius: 150px;
   cursor: pointer;
   transition: background-color 0.15s,
   outline-width 0.05s; opacity: 0.15s, padding 0.05;
-  padding: 20px 50px;
+  width:150px;
+  height:60px;
   border: none;
 }
 
 button:hover{
   outline-width: 3px;
-  padding: 20px 50px;
   background-color: rgb(226, 240, 254);
 }
 
@@ -50,15 +57,5 @@ button:active{
   opacity:0.5
 }
 
-@media (max-width: 800px) {
-  .buttons-grid{
-    grid-template-columns: 1fr;
-  }
-}
 
-@media(min-width:801px) and (max-width:1200px) {
-  .buttons-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
